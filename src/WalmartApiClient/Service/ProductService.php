@@ -61,12 +61,13 @@ class ProductService extends AbstractService implements ProductServiceInterface
         $this->guardString($phrase);
 
         $searchParams = [
-            'query'    => $phrase,
-            'start'    => $start,
+            'query' => $phrase,
+            'start' => $start,
             'numItems' => $limit,
-            'sort'     => $sortField,
-            'order'    => $sortOrder,
-            'facets'   => $facets
+            'sort' => $sortField,
+            'order' => $sortOrder,
+            'facets' => $facets,
+            'richAttributes' => 'true'
         ];
 
         $constraints                  = array_merge($searchParams, ['responseGroup' => 'full']);
