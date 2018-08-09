@@ -9,6 +9,7 @@
  * @license     MIT
  * @since       05/04/2016
  */
+
 namespace WalmartApiClient\Entity;
 
 /**
@@ -482,4 +483,24 @@ interface ProductInterface
      * @param array $attributes
      */
     public function setAttributes($attributes);
+
+    /**
+     * @return string
+     */
+    public function getWeight();
+
+    /**
+     * @param string $weight
+     */
+    public function setWeight($weight);
+
+    /**
+     * @return string
+     */
+    public function getDimensions();
+
+    /**
+     * @param string $dimensions
+     */
+    public function setDimensions($dimensions);
 }

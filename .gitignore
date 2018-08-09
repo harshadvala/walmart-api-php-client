@@ -3,3 +3,4 @@ composer.phar
 composer.lock
 /build/
 example.php
+.idea/

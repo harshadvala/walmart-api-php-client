@@ -9,6 +9,7 @@
  * @license     MIT
  * @since       05/04/2016
  */
+
 namespace WalmartApiClient\Entity;
 
 /**
@@ -20,13 +21,13 @@ class Product extends AbstractEntity implements ProductInterface
 
     /**
      *
-     * @var int Item id 
+     * @var int Item id
      */
     private $itemId;
 
     /**
      *
-     * @var int Parent item id if item is variant 
+     * @var int Parent item id if item is variant
      */
     private $parentItemId;
 
@@ -38,61 +39,61 @@ class Product extends AbstractEntity implements ProductInterface
 
     /**
      *
-     * @var float Minimum suggester retail price 
+     * @var float Minimum suggester retail price
      */
     private $msrp;
 
     /**
      *
-     * @var float Standard sale price 
+     * @var float Standard sale price
      */
     private $salePrice;
 
     /**
      *
-     * @var string Unique product code 
+     * @var string Unique product code
      */
     private $upc;
 
     /**
      *
-     * @var string Category breadcrumbs trail 
+     * @var string Category breadcrumbs trail
      */
     private $categoryPath;
 
     /**
      *
-     * @var string Category id 
+     * @var string Category id
      */
     private $categoryNode;
 
     /**
      *
-     * @var string Product short description 
+     * @var string Product short description
      */
     private $shortDescription;
 
     /**
      *
-     * @var string Product long description 
+     * @var string Product long description
      */
     private $longDescription;
 
     /**
      *
-     * @var string Product brand name 
+     * @var string Product brand name
      */
     private $brandName;
 
     /**
      *
-     * @var string Small product image 
+     * @var string Small product image
      */
     private $thumbnailImage;
 
     /**
      *
-     * @var string Medium product image 
+     * @var string Medium product image
      */
     private $mediumImage;
 
@@ -104,7 +105,7 @@ class Product extends AbstractEntity implements ProductInterface
 
     /**
      *
-     * @var string Full product url including LinkShare attribution  
+     * @var string Full product url including LinkShare attribution
      */
     private $productTrackingUrl;
 
@@ -116,13 +117,13 @@ class Product extends AbstractEntity implements ProductInterface
 
     /**
      *
-     * @var string Walmart add to cart url 
+     * @var string Walmart add to cart url
      */
     private $addToCartUrl;
 
     /**
      *
-     * @var string Full product add to cart url including LinkShare attribution   
+     * @var string Full product add to cart url including LinkShare attribution
      */
     private $affiliateAddToCartUrl;
 
@@ -134,13 +135,13 @@ class Product extends AbstractEntity implements ProductInterface
 
     /**
      *
-     * @var float Standard shipping rate 
+     * @var float Standard shipping rate
      */
     private $standardShipRate;
 
     /**
      *
-     * @var float Expedited shipping rate 
+     * @var float Expedited shipping rate
      */
     private $twoThreeDayShippingRate;
 
@@ -158,13 +159,13 @@ class Product extends AbstractEntity implements ProductInterface
 
     /**
      *
-     * @var string Product color 
+     * @var string Product color
      */
     private $color;
 
     /**
      *
-     * @var bool Whether this item is from one of the Walmart marketplace sellers 
+     * @var bool Whether this item is from one of the Walmart marketplace sellers
      */
     private $marketplace;
 
@@ -200,19 +201,19 @@ class Product extends AbstractEntity implements ProductInterface
 
     /**
      *
-     * @var bool Whether the item is currently available for sale on Walmart.com 
+     * @var bool Whether the item is currently available for sale on Walmart.com
      */
     private $availableOnline;
 
     /**
      *
-     * @var string Indicative quantity of the item available online. Possible values are [Available, Limited Supply, Last few items, Not available]. 
+     * @var string Indicative quantity of the item available online. Possible values are [Available, Limited Supply, Last few items, Not available].
      */
     private $stock;
 
     /**
      *
-     * @var bool Whether the item is price is a Rollback price on Walmart.com 
+     * @var bool Whether the item is price is a Rollback price on Walmart.com
      */
     private $rollBack;
 
@@ -236,13 +237,13 @@ class Product extends AbstractEntity implements ProductInterface
 
     /**
      *
-     * @var int Number of customer reviews available on this item on Walmart.com 
+     * @var int Number of customer reviews available on this item on Walmart.com
      */
     private $numReviews;
 
     /**
      *
-     * @var bool Whether the item is on clearance on Walmart.com 
+     * @var bool Whether the item is on clearance on Walmart.com
      */
     private $clearance;
 
@@ -254,7 +255,7 @@ class Product extends AbstractEntity implements ProductInterface
 
     /**
      *
-     * @var string Date the item will ship on if it is a pre-order item 
+     * @var string Date the item will ship on if it is a pre-order item
      */
     private $preOrderShipsOn;
 
@@ -276,13 +277,13 @@ class Product extends AbstractEntity implements ProductInterface
 
     /**
      *
-     * @var int Maximum number of items in a single order 
+     * @var int Maximum number of items in a single order
      */
     private $maxItemsInOrder;
 
     /**
      *
-     * @var array The available item variants 
+     * @var array The available item variants
      */
     private $variants;
 
@@ -290,6 +291,18 @@ class Product extends AbstractEntity implements ProductInterface
      * @var array Product attributes array
      */
     private $attributes;
+
+    /**
+     *
+     * @var string Product dimensions
+     */
+    private $dimensions;
+
+    /**
+     *
+     * @var string Product weight
+     */
+    private $weight;
 
     /**
      * @return int
@@ -1066,7 +1079,7 @@ class Product extends AbstractEntity implements ProductInterface
 
 
     /**
-     * 
+     *
      * @return int
      */
     public function getMaxItemsInOrder()
@@ -1076,7 +1089,7 @@ class Product extends AbstractEntity implements ProductInterface
 
 
     /**
-     * 
+     *
      * @param int $maxItemsInOrder
      */
     public function setMaxItemsInOrder($maxItemsInOrder)
@@ -1086,7 +1099,7 @@ class Product extends AbstractEntity implements ProductInterface
 
 
     /**
-     * 
+     *
      * @return array
      */
     public function getVariants()
@@ -1096,7 +1109,7 @@ class Product extends AbstractEntity implements ProductInterface
 
 
     /**
-     * 
+     *
      * @param array $variants
      */
     public function setVariants($variants)
@@ -1106,8 +1119,8 @@ class Product extends AbstractEntity implements ProductInterface
 
 
     /**
-     * 
-     * @return array 
+     *
+     * @return array
      */
     public function getAttributes()
     {
@@ -1116,11 +1129,47 @@ class Product extends AbstractEntity implements ProductInterface
 
 
     /**
-     * 
+     *
      * @param array $attributes
      */
     public function setAttributes($attributes)
     {
         $this->attributes = $attributes;
     }
+
+
+    /**
+     * @return string
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * @param string $weight
+     */
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getDimensions()
+    {
+        return $this->dimensions;
+    }
+
+    /**
+     * @param string $dimensions
+     */
+    public function setDimensions($dimensions)
+    {
+        $this->dimensions = $dimensions;
+    }
+
+
 }
