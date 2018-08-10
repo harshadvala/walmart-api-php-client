@@ -16,25 +16,25 @@ abstract class AbstractService
 
     /**
      *
-     * @var \WalmartApiClient\Http\TransportServiceInterface The transport service 
+     * @var \WalmartApiClient\Http\TransportServiceInterface The transport service
      */
     protected $transportService;
 
     /**
      *
-     * @var \WalmartApiClient\Factory\EntityFactoryInterface The entity factory 
+     * @var \WalmartApiClient\Factory\EntityFactoryInterface The entity factory
      */
     protected $entityFactory;
 
     /**
      *
-     * @var \WalmartApiClient\Factory\CollectionFactoryInterface The collection factory 
+     * @var \WalmartApiClient\Factory\CollectionFactoryInterface The collection factory
      */
     protected $collectionFactory;
 
     /**
      * Constructor with injected transport service and relevant factories
-     * 
+     *
      * @param \WalmartApiClient\Http\TransportServiceInterface $transport HTTP Transport service
      * @param \WalmartApiClient\Factory\EntityFactoryInterface $entityFactory Entity factory
      * @param \WalmartApiClient\Factory\CollectionFactoryInterface $collectionFactory Collection factory
@@ -49,7 +49,7 @@ abstract class AbstractService
 
     /**
      * Helper function to guard that the checked value is int
-     * 
+     *
      * @param mixed $value Value to check
      * @throws \InvalidArgumentException
      */
@@ -63,7 +63,7 @@ abstract class AbstractService
 
     /**
      * Helper function to guard that the checked value is float
-     * 
+     *
      * @param mixed $value Value to check
      * @throws \InvalidArgumentException
      */
@@ -77,7 +77,7 @@ abstract class AbstractService
 
     /**
      * Helper function to guard that the checked value is a non-empty array of integers
-     * 
+     *
      * @param mixed $array Value to check
      * @throws \InvalidArgumentException
      */
@@ -97,7 +97,7 @@ abstract class AbstractService
 
     /**
      * Helper function to guard that the checked value is a non-empty string
-     * 
+     *
      * @param mixed $value Value to check
      * @throws \InvalidArgumentException
      */
@@ -110,13 +110,13 @@ abstract class AbstractService
 
 
     /**
-     * Base method for fetching a single entity from API 
-     * 
+     * Base method for fetching a single entity from API
+     *
      * @param string $uri API Service URI
      * @param array $constraints Request parameters
      * @return \WalmartApiClient\Entity\AbstractEntityInterface
      */
-    protected function getEntity($uri, $constraints = [])
+    protected function getEntity($uri, $constraints = ['richAttributes' => 'true'])
     {
         $response = $this->transportService->callApi($uri, $constraints);
 
@@ -125,8 +125,8 @@ abstract class AbstractService
 
 
     /**
-     * Base method for fetching a collection of entities from API 
-     * 
+     * Base method for fetching a collection of entities from API
+     *
      * @param string $uri API Service URI
      * @param array $constraints Request parameters
      * @param string $collectionKey The key of items array in response
